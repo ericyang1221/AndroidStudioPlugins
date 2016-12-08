@@ -23,7 +23,6 @@ Statistic
 统计代码量
 
 Android Postfix Completion
-
 自动补全插件，比如：
 .toast
 Create and show Toast
