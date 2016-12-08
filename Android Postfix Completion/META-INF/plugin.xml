@@ -1,0 +1,43 @@
+<idea-plugin version="2">
+  <id>com.kogitune.intellij.androidPostfixCompletion</id>
+  <name>Android Postfix Completion</name>
+  <version>2.0.3</version>
+  <vendor email="takam.dev@gmail.com" url="https://github.com/takahirom/android-postfix-plugin">takahirom</vendor>
+  <description>
+      Postfix completion templates for Android&lt;br/&gt;&lt;br/&gt;
+
+      &lt;b&gt;Available templates:&lt;/b&gt;&lt;br/&gt;&lt;br/&gt;
+
+      &lt;ul&gt;
+        &lt;li&gt; &lt;b&gt;.toast&lt;/b&gt;&lt;br/&gt;&lt;em&gt;Create and show Toast&lt;/em&gt;&lt;br/&gt;&lt;b&gt;Toast.makeText(context, expr, Toast.LENGTH_SHORT).show();&lt;/b&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+
+      &lt;ul&gt;
+        &lt;li&gt; &lt;b&gt;.log&lt;/b&gt;&lt;br/&gt;&lt;em&gt;Log&lt;/em&gt;&lt;br/&gt;&lt;b&gt;Log.d("log", expr);&lt;/b&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+      &lt;ul&gt;
+        &lt;li&gt; &lt;b&gt;.logd&lt;/b&gt;&lt;br/&gt;&lt;em&gt;If BuildConfig.DEBUG is true, Log message.&lt;/em&gt;&lt;br/&gt;&lt;b&gt;Log.d("log", expr);&lt;/b&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+      &lt;ul&gt;
+        &lt;li&gt; &lt;b&gt;.find&lt;/b&gt;&lt;br/&gt;&lt;em&gt;Typed FindView&lt;/em&gt;&lt;br/&gt;&lt;b&gt;(ViewType) findViewById(expr);&lt;/b&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+      &lt;ul&gt;
+        &lt;li&gt; &lt;b&gt;.isemp&lt;/b&gt;&lt;br/&gt;&lt;em&gt;isEmpty&lt;/em&gt;&lt;br/&gt;&lt;b&gt;TextUtils.isEmpty(expr);&lt;/b&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+      &lt;ul&gt;
+        &lt;li&gt; &lt;b&gt;.vg&lt;/b&gt;&lt;br/&gt;&lt;em&gt;? View.VISIBLE : View.GONE;&lt;/em&gt;&lt;br/&gt;&lt;b&gt; (expr) ? View.VISIBLE : View.GONE;&lt;/b&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+
+    </description>
+  <change-notes>
+      * Add .find that generate (ViewType) findViewById(expr).
+      * Add .vg that generate (expr) ? View.VISIBLE : View.GONE.
+  </change-notes>
+  <idea-version since-build="141.177"/>
+  <depends>com.intellij.modules.lang</depends>
+  <depends>com.intellij.modules.java</depends>
+  <depends>org.jetbrains.android</depends>
+  <extensions defaultExtensionNs="com.intellij">
+    <codeInsight.template.postfixTemplateProvider language="JAVA" implementationClass="com.kogitune.intellij.codeinsight.postfix.AndroidPostfixTemplateProvider"/>
+  </extensions>
+</idea-plugin>
