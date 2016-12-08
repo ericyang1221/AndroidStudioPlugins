@@ -1,28 +1,28 @@
 # AndroidStudioPlugins
 Backup of my Android studio plugins
 
-CodeGlance
+###CodeGlance
 类似sublime的右边预览
 
-GsonFormat
+###GsonFormat
 Json字符串直接转化成Class
 
-idea-gitignore
+###idea-gitignore
 gitignore文件变灰
 
-JSONViewerStudioPlugin
+###JSONViewerStudioPlugin
 类似Postman，可以在Androidstudio中调试http/https请求
 
-Material Theme
+###Material Theme
 主题
 
-MethodsCountIdeaPlugin
+###MethodsCountIdeaPlugin
 统计方法数，
 
-Statistic
+###Statistic
 统计代码量
 
-Android Postfix Completion
+###Android Postfix Completion
 自动补全插件，比如：
 .toast
 Create and show Toast
